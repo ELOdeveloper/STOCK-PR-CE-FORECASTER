@@ -36,6 +36,9 @@
       <div class="api-status" id="api-status">
         <span class="dot dot-green"></span> Live Data
       </div>
+      <button class="settings-btn" id="settings-btn" title="API Key Ayarları" style="margin-top:12px;width:100%;padding:8px;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.3);border-radius:8px;color:#60a5fa;font-size:12px;cursor:pointer;">
+        ⚙ API Key Ayarları
+      </button>
     </div>
   </aside>
 
@@ -218,5 +221,46 @@
   </main>
 
   <script src="app.js"></script>
+
+  <!-- ░░ SETTINGS MODAL ░░ -->
+  <div id="settings-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:999;align-items:center;justify-content:center;">
+    <div style="background:#111318;border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:32px;width:480px;max-width:90vw;">
+      <h2 style="color:#e2e8f0;font-size:16px;font-weight:600;margin:0 0 6px;">⚙ API Key Ayarları</h2>
+      <p style="color:#556070;font-size:12px;margin:0 0 24px;">Key'ler sadece tarayıcında saklanır. Kodda görünmez, GitHub'a gitmez.</p>
+
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-size:11px;color:#8896a8;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px;">
+          Groq API Key
+          <a href="https://console.groq.com" target="_blank" style="color:#3b82f6;margin-left:8px;font-size:11px;">Ücretsiz al →</a>
+        </label>
+        <input id="input-groq" type="password" placeholder="gsk_..." style="width:100%;padding:10px 12px;background:#0b0d11;border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:#e2e8f0;font-size:13px;font-family:monospace;outline:none;box-sizing:border-box;" />
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <label style="display:block;font-size:11px;color:#8896a8;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px;">
+          Twelve Data API Key
+          <a href="https://twelvedata.com/account/new" target="_blank" style="color:#3b82f6;margin-left:8px;font-size:11px;">Ücretsiz al →</a>
+        </label>
+        <input id="input-twelve" type="password" placeholder="abc123..." style="width:100%;padding:10px 12px;background:#0b0d11;border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:#e2e8f0;font-size:13px;font-family:monospace;outline:none;box-sizing:border-box;" />
+      </div>
+
+      <p id="settings-error" style="color:#ef4444;font-size:12px;margin:0 0 16px;min-height:16px;"></p>
+
+      <div style="display:flex;gap:10px;">
+        <button id="settings-save" style="flex:1;padding:10px;background:#3b82f6;border:none;border-radius:8px;color:#fff;font-size:14px;font-weight:500;cursor:pointer;">
+          Kaydet &amp; Başlat
+        </button>
+        <button id="settings-close" style="padding:10px 20px;background:transparent;border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:#8896a8;font-size:14px;cursor:pointer;">
+          İptal
+        </button>
+      </div>
+
+      <p style="color:#556070;font-size:11px;margin-top:16px;line-height:1.6;">
+        Key'ler tarayıcının localStorage'ında saklanır.<br>
+        Başkaları göremez. İstediğinde değiştirebilirsin.
+      </p>
+    </div>
+  </div>
+
 </body>
 </html>
