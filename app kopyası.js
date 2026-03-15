@@ -1,13 +1,4 @@
-/**
- * StockSeer — Stock Price Forecaster
- * ====================================
- * Veri: Twelve Data API  → https://twelvedata.com/account/new   (ücretsiz, günlük 800 istek)
- * AI:   Groq API         → https://console.groq.com             (ücretsiz, çok hızlı)
- *
- * ⚠️  İKİ KEY GEREKİYOR — İKİSİ DE ÜCRETSİZ:
- *   GROQ_API_KEY     → https://console.groq.com        → "Create API Key"
- *   TWELVE_DATA_KEY  → https://twelvedata.com/account/new → kayıt ol, key anında gelir
- */
+
 
 const GROQ_API_KEY    = 'YOUR_GROQ_API_KEY';
 const TWELVE_DATA_KEY = 'YOUR_TWELVEDATA_KEY';
