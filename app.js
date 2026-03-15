@@ -1,7 +1,7 @@
 
 
-const GROQ_API_KEY    = 'YOUR_GROQ_API_KEY';
-const TWELVE_DATA_KEY = 'YOUR_TWELVEDATA_KEY';
+const GROQ_API_KEY    = 'KEY_HERE';
+const TWELVE_DATA_KEY = 'KEY_HERE';
 
 const TD_BASE      = 'https://api.twelvedata.com';
 const CHART_COLORS = ['#3b82f6','#22c55e','#f59e0b','#a78bfa','#2dd4bf','#fb7185'];
